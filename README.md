@@ -1,24 +1,51 @@
-# README
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|index: true, null: false, unique: true|
+|mail|string|null: false|
+|password|string|null: false|
+|image|string|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+has_many :tweets
+has_many :comments
 
-Things you may want to cover:
+## tweetsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|content|text|null: false|
+|date|datetime|null: false|
+|dive_point|string|null: false|
+|water_temperature|string|null: false|
+|temperature|integer|null: false|
+|water_opacity|string|null: false|
+|depth_average|string|null: false|
+|suit|string|null: false|
+|licence|string|null: false|
 
-* Ruby version
+### Association
+has_many :comments
+has_many :images
 
-* System dependencies
 
-* Configuration
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|content|text|null: false|
+|user_id|references|foreign_key: true|
+|tweet_id|references|foreign_key: true|
 
-* Database creation
+### Association
+belongs_to :user
+belong_to :tweet
 
-* Database initialization
 
-* How to run the test suite
+## imagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|text|
+|tweet_id|references|foreign_key: true|
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :tweet
