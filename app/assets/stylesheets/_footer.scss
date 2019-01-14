@@ -1,0 +1,22 @@
+.footer{
+  ul{
+    text-align: center;
+    background-color: black;
+    height: 30px;
+    margin-bottom: 7px;
+    li{
+      display: inline-block;
+      margin: 0 30px 0 30px;
+      border-right: 1px soild white;
+    }
+    a{
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  .footer__copt-right{
+    text-align: center;
+    font-size: 13px;
+  }
+}
