@@ -1,0 +1,5 @@
+      - @tweets.each do |tweet|
+        = link_to "/toppages/#{tweet.id}" ,class: "index-tweet" do
+          .body__new-tweet__container__box
+            = image_tag tweet.images.first.image, size: '213x213'
+            %p #{tweet.name}

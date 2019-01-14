@@ -1,0 +1,23 @@
+.regist{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 150px;
+  height:150px;
+  border-radius: 50%;
+  background: #b30000;
+  .regist-tweet{
+    position: absolute;
+    top: 1px;
+    text-align: center;
+    font-size: 20px;
+    padding-top:30px;
+    text-decoration: none;
+    color:white;
+  }
+  .fa-edit{
+    margin: 3px 0 0 10px;
+    display:inline-block;
+    font-size: 50px;
+  }
+}

@@ -1,0 +1,83 @@
+.wrapper{
+  .slider{
+    .body-icatch-image1{
+      background: url(https://akimogu-fun.net/wp-content/uploads/2018/08/sea-79606__340.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 450px;
+    }
+    .body-icatch-image2{
+      background: url(https://d15no6vzq701ao.cloudfront.net/image/production/acp/3000007158/e3718acd-6788-4b08-94be-fecccb2330fb.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 450px;
+    }
+    .body-icatch-image3{
+      background: url(http://field-note.harazaki.net/wp-content/uploads/2012/07/IMG_5939.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 450px;
+    }
+    .body-icatch-image4{
+      background: url(https://www.jalan.net/news/img/2017/10/1711_kansai_3_042-670x443.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 450px;
+    }
+  }
+  .body__new-tweet{
+    .body__new-tweet__title{
+      text-align: center;
+      .new-title{
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .body__new-tweet__container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 1000px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: 30px;
+
+      .body__new-tweet__container__box{
+        background-color: black;
+        width: 213px;
+        height: 213px;
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+  .body__new-user{
+    .body__new-user__title{
+      text-align: center;
+      .new-user{
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .body__new-user__container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 1000px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: 30px;
+
+      .body__new-user__container__box{
+        background-color: black;
+        width: 213px;
+        height: 213px;
+        border-radius: 50%;
+        margin: 0 10px 0 10px;
+      }
+    }
+  }
+}
