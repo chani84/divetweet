@@ -1,0 +1,22 @@
+.wrapper__sign-in
+  .sign-in
+    .sign-in__header
+      LOG IN
+    .sign-in__main
+      .sign-in__main__top
+        %h3 INFORMATION
+      .sign-in__main__inner
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-group
+          .form-group__email
+            .form-group__title
+              E-MAIL
+              %span.formRequire must
+            = f.email_field :email,class: "form-group-box", placeholder: " divetweet@divetweet.com"
+          .form-group__password
+            .form-group__title
+              PASSWORD
+              %span.formRequire must
+            = f.password_field :password,class: "form-group-box", placeholder: " minimum password 6length", autocomplete: "off"
+        .form-group__submit
+          = f.submit "SUBMIT"
