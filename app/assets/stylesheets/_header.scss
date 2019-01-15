@@ -48,18 +48,83 @@
   }
 
   .header-bottom{
+    display: flex;
+    justify-content: flex-end;
     .header-bottom__left{
-      margin-left: 400px;
+      margin-right: 200px;
       ul{
         li{
           display: inline-block;
+        }
+        a{
           font-size: 12px;
           font-weight: bold;
-          margin: 0 10px 0 10px;
+          margin: 0 50px 0 0;
           color: black;
         }
       }
     }
-    .header-bottom__right{}
+    .header-bottom__right{
+      display: flex;
+      justify-content: flex-end;
+      width:inherit;
+      text-align: center;
+      line-height: 15px;
+      margin: 12px 50px 0 0;
+      .header-bottom__right__logout{
+        border-radius: 10%;
+        background-color: #00a2d7;
+        font-size: 13px;
+        height: 15px;
+        padding: 8px 13px;
+        color: white;
+        text-decoration: none;
+      }
+      .header-bottom__right__profile{
+        margin-left: 20px;
+        margin-top: 7px;
+        text-decoration: none;
+        a.header-bottom__right__profile{
+          margin: 0;
+          font-size: 14px;
+          height: 15px;
+          padding: 8px 12px;
+          border-radius: 5%;
+          color: #00a2d7;
+          border: 1px #00a2d7 solid;
+        }
+      }
+    }
+    .header-bottom__right2{
+      display: flex;
+      justify-content: flex-end;
+      width:inherit;
+      text-align: center;
+      line-height: 15px;
+      margin: 12px 50px 0 0;
+      .header-bottom__right2__login{
+        border-radius: 10%;
+        background-color: #00a2d7;
+        font-size: 13px;
+        height: 15px;
+        padding: 8px 13px;
+        color: white;
+        text-decoration: none;
+      }
+      .header-bottom__right2__regist{
+        margin-left: 20px;
+        margin-top: 7px;
+        text-decoration: none;
+        a.header-bottom__right2__regist{
+          margin: 0;
+          font-size: 14px;
+          height: 15px;
+          padding: 8px 12px;
+          border-radius: 5%;
+          color: #00a2d7;
+          border: 1px #00a2d7 solid;
+        }
+      }
+    }
   }
 }
