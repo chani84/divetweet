@@ -1,0 +1,65 @@
+.wrapper__show-tweet
+  .show-tweet
+    %h1.show-tweet__name
+      = @tweet.name
+    .show-tweet__detail
+      .show-tweet__detail__hidden
+        .show-tweet__detail__left
+          .show-tweet__detail__left__top
+            - @image_top.each do |image|
+              .show-tweet__detail__left__top__image
+                = image_tag image.image
+          .show-tweet__detail__left__bottom
+            - @image_bottom.each do |image|
+              .show-tweet__detail__left__bottom__image
+                = image_tag image.image
+        .show-tweet__detail__right
+          .show-tweet__detail__right__table
+            %table{width: "450", height: "381"}
+              %tr
+                %th.table-left USER
+                %th.table-right
+                  = @tweet.user.nickname
+              %tr
+                %td.table-left DATE
+                %td.table-right
+                  = @tweet.date
+              %tr
+                %td.table-left DIVE POINT
+                %td.table-right
+                  = @tweet.dive_point
+              %tr
+                %td.table-left TEMPERATURE
+                %td.table-right
+                  = @tweet.date
+              %tr
+                %td.table-left WATER TEMPERATURE
+                %td.table-right
+                  = @tweet.water_temperature
+              %tr
+                %td.table-left WATER OPACITY
+                %td.table-right
+                  = @tweet.water_opacity
+              %tr
+                %td.table-left DEPTH AVERAGE
+                %td.table-right
+                  = @tweet.depth_average
+              %tr
+                %td.table-left SUIT
+                %td.table-right
+                  = @tweet.suit
+              %tr
+                %td.table-left LICENCE
+                %td.table-right
+                  = @tweet.licence
+    .show-tweet__content
+      .show-tweet__content__container
+        = @tweet.content
+    .show-tweet__comment
+      %h4 COMMENT
+      .show-tweet__comment__box
+    .show-tweet__comment__input
+      %textarea.show-tweet__comment__input__box
+      %button.show-tweet__comment__input__button
+        = link_to "SEND", "#"
+  / - if @tweet.user.comments.present?

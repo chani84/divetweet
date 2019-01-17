@@ -1,0 +1,132 @@
+.wrapper__show-tweet{
+  background-color: #f5f5f5;
+  .show-tweet{
+    box-sizing: border-box;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    .show-tweet__name{
+      text-align: center;
+    }
+    .show-tweet__detail{
+      display:flex;
+      justify-content:space-around;
+      .show-tweet__detail__hidden{
+        display: flex;
+        .show-tweet__detail__left{
+          .show-tweet__detail__left__top{
+          }
+          .show-tweet__detail__left__bottom{
+            display: flex;
+            .show-tweet__detail__left__bottom__image{
+            }
+          }
+        }
+        .show-tweet__detail__right{
+          margin-left: 10px;
+          .show-tweet__detail__right__table{
+          }
+        }
+      }
+    }
+    .show-tweet__content{
+      overflow: scroll;
+      width: 795px;
+      height: 150px;
+      margin: auto;
+      border: 2px solid #00a2d7;
+      padding: 10px;
+      margin-bottom: 10px;
+      .show-tweet__content__container{
+      }
+    }
+    .show-tweet__comment{
+      h4{
+        text-align: center;
+        margin: 10px;
+      }
+      .show-tweet__comment__box{
+        overflow: scroll;
+        width: 795px;
+        height: 300px;
+        margin: auto;
+        border: 1px solid #00a2d7;
+        padding: 10px;
+        background-color: #f2f2f2;
+        opacity: 0.7;
+      }
+    }
+    .show-tweet__comment__input{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 20px;
+      textarea{
+        overflow: scroll;
+        width: 695px;
+        height: 80px;
+        border: 2px solid #00a2d7;
+        padding: 10px;
+        font-size: 15px;
+      }
+      .show-tweet__comment__input__button{
+        background-color: #00a2d7;
+        border: 1px soild white;
+        opacity: 0.8;
+        width: 100px;
+        font-size: 15px;
+        a{
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.show-tweet__detail__left__top__image{
+  img{
+    width: 358px;
+    height: 300px;
+    border:solid 1px white;
+    border: 0px;
+  }
+}
+.show-tweet__detail__left__bottom__image{
+  img{
+    height:75px;
+    width:87.5px;
+    border:solid 1px white;
+    opacity: 0.5;
+  }
+}
+.show-tweet__detail__left__bottom__image:first-child{
+  img{
+    height:75px;
+    width:87.5px;
+    border:solid 1px white;
+    opacity: 1;
+  }
+}
+.table-left{
+  width: 46%;
+  background-color: #00a2d7;
+  opacity: 0.7;
+  border: 1px solid white;
+  font-size: 14px;
+}
+.table-right{
+  width: 54%;
+  background-color: #ffffe6;
+  border: 1px solid white;
+  font-size: 13px;
+}
+th{
+  padding:8px;
+  line-height: 1.2;
+}
+td{
+  padding:8px;
+  line-height: 1.4;
+}

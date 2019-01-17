@@ -29,7 +29,7 @@
         .header-bottom__right__logout
           = link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "header-bottom__right__logout"
         .header-bottom__right__profile
-          = link_to " MY PAGE ", "#", class: "header-bottom__right__profile"
+          = link_to " MY PAGE ", "/users/:id", class: "header-bottom__right__profile"
     - else
       .header-bottom__right2
         .header-bottom__right2__login
