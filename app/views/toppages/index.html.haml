@@ -8,23 +8,21 @@
     .body__new-tweet__title
       = link_to "NEW DIVE TWEETS", "#", class: "new-title", style: "text-decoration: none;"
     .body__new-tweet__container
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
-      .body__new-tweet__container__box
+      - @tweet.each do |tweet|
+        = link_to "/tweets/#{tweet.id}", class: "" do
+          .body__new-tweet__container__box
+            .body__new-tweet__container__box__image
+              = image_tag tweet.images.first.image, size:"213x213"
+            .body__new-tweet__container__box__name
+              = tweet.name
   .body__new-user
     .body__new-user__title
       = link_to "NEW USERS", "#", class: "new-user", style: "text-decoration: none;"
     .body__new-user__container
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
-      .body__new-user__container__box
+      - @user.each do |user|
+        = link_to "/users/#{user.id}", class: "" do
+          .body__new-user__container__box
+            .body__new-user__container__box__image
+              = image_tag user.image, size:"213x213", id:"user-image"
+            .body__new-user__container__box__name
+              = user.nickname

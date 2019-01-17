@@ -1,0 +1,29 @@
+.mypage__wrapper
+  .mypage
+    .mypage__left
+      .mypage__left__profile
+        .mypage__left__profile__top
+          .mypage__left__profile__top__image
+            = image_tag @image
+          .mypage__left__profile__top__nickname #{@nickname}
+        .mypage__left__profile__bottom
+          %span #{@text}
+        .mypage__left__profile__edit
+          = link_to "EDIT", edit_user_registration_path, type: "button"
+
+    .mypage__right
+      %h2.mypage__right__title
+        #{@nickname} DIVE TWEETS
+      .mypage__right__container
+        - @tweet.each do |tweet|
+          .mypage__right__container__box
+            .mypage__right__container__box__image
+              = link_to "/tweets/#{tweet.id}", class: "" do
+                = image_tag tweet.images.first.image, size:"213x213"
+            .mypage__right__container__box__name
+              = tweet.name
+            .mypage__right__button
+              .mypage__right__button__edit
+                = link_to "EDIT", edit_tweet_path, type: "button"
+              .mypage__right__button__delete
+                = link_to "DELETE", tweet_path(tweet.id), method: :delete, type: "button"

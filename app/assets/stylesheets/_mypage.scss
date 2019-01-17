@@ -1,0 +1,132 @@
+.mypage__wrapper{
+  .mypage{
+    display:flex;
+    .mypage__left{
+      margin-top: 30px;
+      margin-left: 30px;
+      .mypage__left__profile{
+        width: 300px;
+        .mypage__left__profile__top{
+          border-bottom: 2px solid #b30000;
+          height: 150px;
+          background: url(https://3c1703fe8d.site.internapcdn.net/newman/csz/news/800/2017/3-scientistsha.jpg);
+          background-position: center;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .mypage__left__profile__top__image{
+            margin: auto;
+            margin-top: 10px;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            img{
+              width: 110px;
+              height: 110px;
+              border-radius: 50%;
+            }
+          }
+          .mypage__left__profile__top__nickname{
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+          }
+        }
+        .mypage__left__profile__bottom{
+          overflow: scroll;
+          height: 300px;
+          background-color: #e6ffff;
+          opacity: 0.5;
+          padding: 10px;
+          span{
+            word-wrap: break-word;
+          }
+        }
+      }
+    }
+    .mypage__right{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      .mypage__right__title{
+      }
+      .mypage__right__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 1000px;
+        height: 500px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-left: 30px;
+        .mypage__right__container__box{
+          background-color: black;
+          width: 213px;
+          height: 213px;
+          margin: 0 10px 0 10px;
+          .mypage__right__container__box__name{
+            text-align: center;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+.mypage__right__title{
+  margin-left: 100px;
+}
+.mypage__left__profile__edit{
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 20px;
+  margin-top: 7px;
+  a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    height: 15px;
+    padding: 8px 12px;
+    border-radius: 5%;
+    color: #00a2d7;
+    border: 2px #00a2d7 solid;
+  }
+}
+.mypage__right__button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  .mypage__right__button__edit{
+    a{
+      text-decoration: none;
+      color: black;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      height: 15px;
+      padding: 8px 12px;
+      border-radius: 5%;
+      color: #00a2d7;
+      border: 2px #00a2d7 solid;
+    }
+  }
+  .mypage__right__button__delete{
+    margin-left: 10px;
+    a{
+      text-decoration: none;
+      color: black;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      height: 15px;
+      padding: 8px 12px;
+      border-radius: 5%;
+      color: red;
+      border: 2px red solid;
+    }
+  }
+}

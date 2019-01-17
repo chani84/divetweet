@@ -1,0 +1,63 @@
+.wrapper__new-tweet
+  .new-tweet
+    .new-tweet__header
+      REGISIT TWEET
+    .new-tweet__main
+      .new-tweet__main__top
+        %h3 INFORMATION
+      .new-tweet__main__inner
+      = form_for @tweet do |f|
+        .form-group
+          .form-group__text
+            .form-group__title
+              TITLE
+              %span.formRequire must
+            = f.text_field :name, class: "form-group-box", maxlength: "20"
+          .form-group__content
+            .form-group__title
+              CONTENT
+              %span.formRequire must
+            = f.text_area :content, class: "form-group-box content-box", maxlength: "200"
+          .form-group__date
+            .form-group__title
+              DATE
+              %span.formRequire must
+            = f.datetime_select :date, class: "form-group-box select-box"
+          .form-group__dive-point
+            .form-group__title
+              DIVE POINT
+              %span.formRequire must
+            = f.text_field :dive_point, class: "form-group-box", maxlength: "20"
+          .form-group__temperature
+            .form-group__title
+              TEMPERATURE
+              %span.formRequire must
+            = f.text_field :temperature, class: "form-group-box integer-box"
+          .form-group__water_temperature
+            .form-group__title
+              WATER TEMPERATURE
+              %span.formRequire must
+            = f.text_field :water_temperature, class: "form-group-box integer-box"
+          .form-group__water_opacity
+            .form-group__title
+              WATER OPACITY
+              %span.formRequire must
+            = f.text_field :water_opacity, class: "form-group-box integer-box"
+          .form-group__depth_average
+            .form-group__title
+              DEPTH AVERAGE
+              %span.formRequire must
+            = f.text_field :depth_average, class: "form-group-box integer-box"
+          .form-group__suit
+            .form-group__title
+              SUIT
+              %span.formRequire must
+            = f.select :suit,[["NONE","NONE"],["3mm WET SUIT","3mm WET SUIT"],["5mm WET SUIT","5mm WET SUIT"],["DRY SUIT","DRY SUIT"]]
+          .form-group__licence
+            .form-group__title
+              LICENCE
+              %span.formRequire must
+            = f.select :licence,[["NONE","NONE"],["PADI","PADI"],["SSI","SSI"],["NAVI","NAVI"],["SNSI","SNSI"],["BSAC","BSAC"],["ect","ect"]]
+        .form-group__submit
+          = f.submit "SUBMIT"
+          / - binding.pry
