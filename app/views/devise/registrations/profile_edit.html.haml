@@ -1,0 +1,28 @@
+.wrapper__profile-edit
+  .profile-edit
+    .profile-edit__header
+      PROFILE EDIT
+    .profile-edit__main
+      .edit__main__top
+        %h3 INFORMATION
+      .profile-edit__main__inner
+      = form_for current_user, url: {action: 'profile_update'} do |f|
+        .form-group
+          .form-group__nickname
+            .form-group__title
+              NICK NAME
+              %span.formRequire must
+            = f.text_field :nickname,class: "form-group-box", placeholder: " maxlength 6", autofocus: true, maxlength: ""
+          .form-group__email
+            .form-group__title
+              E-MAIL
+              %span.formRequire must
+            = f.email_field :email,class: "form-group-box", placeholder: " divetweet@divetweet.com"
+
+          .form-group__profile
+            .form-group__title
+              PROFILE
+            = f.text_area :text,class: "form-group-box profile-box", placeholder: " maxlength 800", autofocus: true, maxlength: "800"
+          .form-group__submit
+            = f.submit "UPDATE"
+            / - binding.pry

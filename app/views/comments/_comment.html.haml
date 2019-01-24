@@ -1,0 +1,10 @@
+/ .comment{ "data-comment-id": "#{comment.id}" }
+/   .upper-comment
+/   .upper-comment__user-name
+/     = comment.user.name
+/   .upper-comment__date
+/     = comment.created_at.strftime('%Y/%m/%d %H:%M:%S')
+/ .lower-meesage
+/   - if comment.content.present?
+/     %p.lower-message__content
+/       = comment.content

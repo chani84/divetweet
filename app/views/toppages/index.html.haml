@@ -9,7 +9,7 @@
       = link_to "NEW DIVE TWEETS", "#", class: "new-title", style: "text-decoration: none;"
     .body__new-tweet__container
       - @tweet.each do |tweet|
-        = link_to "/tweets/#{tweet.id}", class: "" do
+        = link_to "/toppages/#{tweet.id}", class: "" do
           .body__new-tweet__container__box
             .body__new-tweet__container__box__image
               = image_tag tweet.images.first.image, size:"213x213"

@@ -6,22 +6,21 @@ class UsersController < ApplicationController
     @tweet = current_user.tweets.page(params[:page]).per(6).order("created_at DESC")
   end
 
-  def edit
-    @profile = User.find[:text]
-  end
+  # def profile_edit
+  # end
 
-  def update
-    current_user.assign_attributes(account_update_params)
-    if current_user.save
-    redirect_to "/users/:id", notice: 'プロフィールを更新しました'
-    else
-      render "edit"
-    end
-  end
+  # def profile_update
+  #   current_user.assign_attributes(configure_account_update_params)
+  #   if current_user.save
+  #   redirect_to root_path, notice: 'PROFILE EDIT COMPLETE'
+  #   else
+  #     render "profile_edit"
+  #   end
+  # end
 
-  protected
+  # protected
 
-  def configure_account_update_params
-   devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :text])
-  end
+  # def configure_account_update_params
+  #  devise_parameter_sanitizer.permit(:account_update, keys: [:nickname, :text, :email])
+  # end
 end

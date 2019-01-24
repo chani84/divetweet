@@ -1,5 +1,5 @@
-.wrapper__new-tweet{
-  .new-tweet{
+.wrapper__profile-edit{
+  .profile-edit{
     width: 600px;
     margin: 0 auto;
     margin-top: 40px;
@@ -7,20 +7,20 @@
     padding: 20px 0;
     background-color: #00a2d7;
     opacity: 0.8;
-    .new-tweet__header{
+    .profile-edit__header{
       text-align: center;
       font-size: 25px;
       font-weight: bold;
       margin-top: 30px;
     }
-    .new-tweet__main{
+    .profile-edit__main{
       text-align: center;
-      .new-tweet__main__top{
+      .profile-edit__main__top{
         h3{
           margin-top: 5px;
         }
       }
-      .new-tweet__main__inner{
+      .profile-edit__main__inner{
         .form-group{
           display:inline-block;
         }
@@ -49,61 +49,9 @@
   color: white;
   font-size: 8px;
 }
-.content-box{
+.profile-box{
   height: 160px;
   overflow: scroll;
-}
-#integer-box{
-  display:flex;
-  justify-content: flex-end;
-  margin-left: 96px;
-  width: 200px;
-  text-align: right;
-}
-#tweet_date_1i{
-  height: 40px;
-  width: 70px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-#tweet_date_2i{
-  height: 40px;
-  width: 70px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-#tweet_date_3i{
-  height: 40px;
-  width: 70px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-#tweet_date_4i{
-  height: 40px;
-  width: 70px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-#tweet_date_5i{
-  height: 40px;
-  width: 70px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-
-#tweet_suit{
-  margin: 10px 0 10px 0;
-  height: 40px;
-  width: 410px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
-}
-#tweet_licence{
-  margin: 10px 0 10px 0;
-  height: 40px;
-  width: 410px;
-  font-size: 15px;
-  margin: 10px 0 10px 0;
 }
 
 .form-group__submit{

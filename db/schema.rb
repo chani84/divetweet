@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20190117054008) do
     t.text "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "tweet_id"
     t.bigint "user_id"
+    t.bigint "tweet_id"
     t.index ["tweet_id"], name: "index_comments_on_tweet_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end

@@ -55,11 +55,22 @@
     .show-tweet__content
       .show-tweet__content__container
         = @tweet.content
-    .show-tweet__comment
-      %h4 COMMENT
-      .show-tweet__comment__box
+    - if @comments
+      .show-tweet__comment
+        %h4 COMMENT
+        .show-tweet__comment__box
+          - if @comments
+            - @comments.each do |comment|
+              .show-tweet__comment__box__user-comment
+                .show-tweet__comment__box__nickname
+                  = link_to comment.user.nickname, "/users/#{comment.user_id}"
+                .show-tweet__comment__box__content
+                  = comment.content
+
     .show-tweet__comment__input
-      %textarea.show-tweet__comment__input__box
-      %button.show-tweet__comment__input__button
-        = link_to "SEND", "#"
+      .comment__form
+      = form_tag "/tweets/#{@tweet.id}/comments", method: :post, id: "new_comment"  do
+        %textarea{class: "show-tweet__comment__input__box", name: "text", id: "form-comment"}
+        %input{type: "submit", value: "SEND", class: "show-tweet__comment__input__button", id: "submit-comment"}
+        / - binding.pry
   / - if @tweet.user.comments.present?

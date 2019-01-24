@@ -1,0 +1,7 @@
+.wrapper__comment
+  .comment
+    = render partial: "comments/index", locals: {contents: @user.contents}
+  .comment__form
+  = form_for root_path @comment do |f|
+    = f.text_area :content ,class: "show-tweet__comment__input__box", id: "form-comment"
+    = f.submit "SEND", class: "show-tweet__comment__input__button", id: "submit-comment"
