@@ -56,11 +56,11 @@
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
-        width: 1000px;
-        height: 500px;
+        width: 850px;
+        height: 700px;
         margin: 0 auto;
         margin-top: 30px;
-        margin-left: 30px;
+        margin-left: 80px;
         .mypage__right__container__box{
           background-color: black;
           width: 213px;
@@ -69,6 +69,7 @@
           .mypage__right__container__box__name{
             text-align: center;
             color: black;
+            font-weight: bold;
           }
         }
       }

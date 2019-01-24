@@ -55,6 +55,22 @@
         padding: 10px;
         background-color: #f2f2f2;
         opacity: 0.7;
+        .show-tweet__comment__box__user-comment{
+          background-color: white;
+          padding: 5px;
+          margin-bottom: 10px;
+          .show-tweet__comment__box__nickname{
+            a{
+              text-decoration: none;
+              color: blue;
+              font-weight: bold;
+            }
+          }
+        }
+      .show-tweet__comment__box__date{
+        font-size: 8px;
+        margin:10px;
+      }
       }
     }
     .show-tweet__comment__input{
@@ -62,20 +78,22 @@
       flex-direction: row;
       justify-content: center;
       margin-top: 20px;
-      textarea{
+      #form-comment{
         overflow: scroll;
-        width: 695px;
+        width: 690px;
         height: 80px;
         border: 2px solid #00a2d7;
         padding: 10px;
         font-size: 15px;
       }
-      .show-tweet__comment__input__button{
+      #submit-comment{
         background-color: #00a2d7;
         border: 1px soild white;
         opacity: 0.8;
         width: 100px;
+        height: 50px;
         font-size: 15px;
+        cursor: pointer;
         a{
           text-decoration: none;
           color: white;

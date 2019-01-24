@@ -9,11 +9,11 @@
         .mypage__left__profile__bottom
           %span #{@text}
         .mypage__left__profile__edit
-          = link_to "EDIT", edit_user_registration_path, type: "button"
+          = link_to "EDIT", profile_edit_path, type: "button"
 
     .mypage__right
       %h2.mypage__right__title
-        #{@nickname} DIVE TWEETS
+        #{@nickname}'s DIVE TWEETS
       .mypage__right__container
         - @tweet.each do |tweet|
           .mypage__right__container__box

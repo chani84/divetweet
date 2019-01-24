@@ -1,0 +1,22 @@
+.wrpper__search-tweet
+  .search-tweet
+    .search-tweet__top
+      %select.search-tweet__top__sort
+        %option{value: "0"} SORT TWEET
+        %option{value: "1"} NEW DATE
+        %option{value: "2"} OLD DATE
+    .search-tweet__bottom
+      .search-tweet__bottom__title
+        - if params[:keyword].present?
+          %h2 SEARCH RESULT
+        - else
+          %h2 DO N0T MATCHED
+      .search-tweet__bottom__result
+        - if params[:keyword].present?
+          - @tweet.each do |tweet|
+            = link_to "/toppages/#{tweet.id}", class: "" do
+              .body__new-tweet__container__box
+                .body__new-tweet__container__box__image
+                  = image_tag tweet.images.first.image, size:"213x213"
+                .body__new-tweet__container__box__name
+                  = tweet.name

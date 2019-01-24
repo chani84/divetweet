@@ -32,22 +32,22 @@
             .form-group__title
               TEMPERATURE
               %span.formRequire must
-            = f.text_field :temperature, class: "form-group-box integer-box"
+            = f.text_field :temperature, class: "form-group-box", id: "integer-box"
           .form-group__water_temperature
             .form-group__title
               WATER TEMPERATURE
               %span.formRequire must
-            = f.text_field :water_temperature, class: "form-group-box integer-box"
+            = f.text_field :water_temperature, class: "form-group-box", id: "integer-box"
           .form-group__water_opacity
             .form-group__title
               WATER OPACITY
               %span.formRequire must
-            = f.text_field :water_opacity, class: "form-group-box integer-box"
+            = f.text_field :water_opacity, class: "form-group-box", id: "integer-box"
           .form-group__depth_average
             .form-group__title
               DEPTH AVERAGE
               %span.formRequire must
-            = f.text_field :depth_average, class: "form-group-box integer-box"
+            = f.text_field :depth_average, class: "form-group-box", id: "integer-box"
           .form-group__suit
             .form-group__title
               SUIT
