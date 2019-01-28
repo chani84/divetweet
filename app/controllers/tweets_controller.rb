@@ -1,7 +1,25 @@
+class TweetForm
+  include ActiveModel::Model #テーブルは持ちませんがApplicationRecordのsaveメソッドなどを提供します
+
+  attr_accessor :name, :content, :date, :dive_point, :temperature, :water_temperature, :water_opacity, :depth_average, :suit, :licence, :image
+
+  validates :name, :content, presence: true
+
+  def save
+    return false if invalid? #バリデーションを追加する場合はここに追加します
+
+    tweet = Tweet.new(:name, :content, :date, :dive_point, :temperature, :water_temperature, :water_opacity, :depth_average, :suit, :licence).merge(user_id: current_user.id)
+    tweet.images.new(:image) #この処理をimageの分だけループすれば複数保存も出ます
+    tweet.save
+  end
+end
+
+
 class TweetsController < ApplicationController
   def new
-    @tweet = Tweet.new
-    @tweet.images.build
+    # @tweet = Tweet.new
+    # @tweet.images.build
+    @tweet_form = TweetForm.new #formオブジェクトパターンのためのクラスをviewでformに渡します
   end
 
   def index
@@ -9,12 +27,20 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
-    if @tweet.save!
-      redirect_to root_path, notice: "REGIST TWEET COMPLETE"
+    # @tweet = Tweet.create(tweet_params)
+    # # binding.pry
+    # if @tweet.save
+    #   redirect_to root_path, notice: "REGIST TWEET COMPLETE"
+    # else
+    #   render :new, alert: "FAILED"
+    # end
+    @tweet_form = TweetForm.new(tweet_params)
+    if @tweet_form.save
+      redirect_to root_path
     else
-      render :index, alert: "FAILED"
+      render :new
     end
+
   end
 
   def edit
@@ -61,14 +87,12 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:name, :content, :date, :dive_point, :temperature, :water_temperature, :water_opacity, :depth_average, :suit, :licence)
+    # params.require(:tweet).permit(:name, :content, :date, :dive_point, :temperature, :water_temperature, :water_opacity, :depth_average, :suit, :licence, images_attributes: [:image]).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:name, :content, :date, :dive_point, :temperature, :water_temperature, :water_opacity, :depth_average, :suit, :licence, :image).merge(user_id: current_user.id)
   end
 
   def set_tweet
     @tweet = Tweet.find(params[:id])
   end
 
-  # def move_to_index
-  #   redirect_to action: "index" unless user_signed_in?
-  # end
 end
