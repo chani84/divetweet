@@ -40,7 +40,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'dotenv-rails'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0.0'
+gem 'mini_magick'
 gem 'fog-aws'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +50,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.4.1"
   gem 'factory_bot_rails'
 end
 
@@ -62,6 +64,10 @@ group :development do
   gem 'erb2haml'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'devise'
@@ -72,3 +78,5 @@ end
   gem 'compass-rails','3.1.0'
   gem 'sprockets', '3.7.2'
   gem 'haml-rails'
+  gem "refile", github: 'refile/refile', require: "refile/rails"
+  gem "refile-mini_magick", github: 'refile/refile-mini_magick'
